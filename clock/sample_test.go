@@ -21,6 +21,7 @@ func TestCanDeliver(t *testing.T) {
 
 	for _, c := range cases {
 		fakeHour(c.hour)
+		t.Log(myClock.Now())
 		got := CanDeliver()
 		if got != c.want {
 			t.Errorf("hour: %d, CanDeliver() => %t, want %t", c.hour, got, c.want)
