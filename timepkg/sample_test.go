@@ -6,6 +6,7 @@ import (
 )
 
 func fakeHour(hour int) {
+	time.ResetFake()
 	time.Slip(time.Date(2017, 7, 7, hour, 0, 0, 0, time.Local))
 }
 func TestCanDeliver(t *testing.T) {
